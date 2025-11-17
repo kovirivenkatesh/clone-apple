@@ -7,14 +7,14 @@ const Accessories = () => {
       type: "promo",
       title:'In with the new',
       tag:'In accessories you love.In a new mix of colours and textures.',
-      img: '/Images/Store/Accessories/mixture.png',
+      img: 'Images/Store/Accessories/mixture.png',
     },
     {
       type: "product",
       new:true,
       name:'iPhone 17 Pro Max TechWoven Case with MagSafe-Blue',
      price:'MRP ₹5900.00 (Incl.of all taxes)',
-      img: '/Images/Store/Accessories/iPhone 17 pro max.png',
+      img: 'Images/Store/Accessories/iPhone 17 pro max.png',
       
     },
     {
@@ -22,7 +22,7 @@ const Accessories = () => {
       new:true,
       name:'iPhone 17 Pro Sicicone Case with MagSafe-Orange',
       price:'MRP ₹4900.00 (Incl.of all taxes)',
-      img: '/Images/Store/Accessories/iPhone 17 pro.png',
+      img: 'Images/Store/Accessories/iPhone 17 pro.png',
       
     },
     {
@@ -30,7 +30,7 @@ const Accessories = () => {
       new:true,
       name:'Magic Keyboard for iPad Air 13"(M3)-US English-Black',
       price:'MRP ₹29900.00 (Incl.of all taxes)',
-      img: '/Images/Store/Accessories/Magic Keyboard.png',
+      img: 'Images/Store/Accessories/Magic Keyboard.png',
       
     },
     {
@@ -38,7 +38,7 @@ const Accessories = () => {
       new:true,
      name:'Crossbody Strap-Light Blue',
      price:'MRP ₹5900.00 (Incl.of all taxes)',
-      img: '/Images/Store/Accessories/strap.png',
+      img: 'Images/Store/Accessories/strap.png',
       
     },
     {
@@ -46,7 +46,7 @@ const Accessories = () => {
       new:true,
       name:'iPhone Air Bumper-Light Blue',
       price:'MRP ₹3900.00 (Incl.of all taxes)',
-      img: '/Images/Store/Accessories/AirBumper.png',
+      img: 'Images/Store/Accessories/AirBumper.png',
       
     },
         {
@@ -54,7 +54,7 @@ const Accessories = () => {
           new:true,
       name:'46mm Neon Yellow Sport Loop',
       price:'MRP ₹3900.00 (Incl.of all taxes)',
-      img: '/Images/Store/Accessories/Loop.png',
+      img: 'Images/Store/Accessories/Loop.png',
       
     },
         {
@@ -62,7 +62,7 @@ const Accessories = () => {
           new:true,
       name:'46mm Anchor Blue Sport Band -M/L',
       price:'MRP ₹4500.00 (Incl.of all taxes)',
-      img: '/Images/Store/Accessories/band.png',
+      img: 'Images/Store/Accessories/band.png',
       
     },
         {
@@ -70,7 +70,7 @@ const Accessories = () => {
           new:true,
       name:'iPhone Air MagSafe Battery',
       price:'MRP ₹11900.00 (Incl.of all taxes)',
-      img: '/Images/Store/Accessories/battery.png',
+      img: 'Images/Store/Accessories/battery.png',
       
     },
         {
@@ -78,13 +78,13 @@ const Accessories = () => {
           new:true,
       name:'MagSafe Charger (2m)',
       price:'MRP ₹5500.00 (Incl.of all taxes)',
-      img: '/Images/Store/Accessories/charger.png',
+      img: 'Images/Store/Accessories/charger.png',
       
     },
         {
            type: "promoLast",
        title:'Explore all Acccessories.',
-      img: '/Images/Store/Accessories/all accessories.png',
+      img: 'Images/Store/Accessories/all accessories.png',
       
     },
   ];

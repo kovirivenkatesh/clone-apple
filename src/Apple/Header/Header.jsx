@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [hovered, setHovered] = useState(null);
@@ -7,16 +8,16 @@ const Header = () => {
   let closeTimeout;
 
   const links = [
-    "Store",
-    "Mac",
-    "iPad",
-    "iPhone",
-    "Watch",
-    "AirPods",
-    "TV & Home",
-    "Entertainment",
-    "Accessories",
-    "Support",
+    { label: "Store", path: "/store" },
+    { label: "Mac", path: "/mac" },
+    { label: "iPad", path: "/ipad" },
+    { label: "iPhone", path: "/iphone" },
+    { label: "Watch", path: "/watch" },
+    { label: "AirPods", path: "/airpods" },
+    { label: "TV & Home", path: "/tvhome" },
+    { label: "Entertainment", path: "/entertainment" },
+    { label: "Accessories", path: "/accessories" },
+    { label: "Support", path: "/support" },
   ];
 
   const dropdownContent = {
@@ -181,30 +182,31 @@ const Header = () => {
     closeTimeout = setTimeout(() => {
       setIsDropdownVisible(false);
       setHovered(null);
-    }, 200); // Delay prevents flicker when moving between link and dropdown
+    }, 200);
   };
-
+ 
   return (
-    <header className="bg-gray-100 backdrop-blur-md relative z-50">
-      <nav className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+   <header className="bg-gray-100 backdrop-blur-md relative z-50 ">
+
+      <nav className="max-w-7xl mx-auto px-4  flex items-center justify-between">
         {/* ---------- Desktop Header ---------- */}
         <div className="hidden md:flex items-center justify-center w-full relative">
-          {/* Apple icon */}
+          {/* Apple Icon */}
           <div className="text-xl pr-10">
             <i className="fa-brands fa-apple"></i>
           </div>
 
           {/* Navigation Links */}
           <div className="flex items-center space-x-8">
-            {links.map((label) => (
+            {links.map(({ label, path }) => (
               <div
                 key={label}
                 onMouseEnter={() => handleMouseEnter(label)}
                 onMouseLeave={handleMouseLeave}
                 className="relative"
               >
-                <a
-                  href="#"
+                <Link
+                  to={path}
                   className={`text-xs font-medium transition-colors ${
                     hovered === label && isDropdownVisible
                       ? "text-black"
@@ -212,12 +214,12 @@ const Header = () => {
                   }`}
                 >
                   {label}
-                </a>
+                </Link>
               </div>
             ))}
           </div>
 
-          {/* Right side icons */}
+          {/* Right Icons */}
           <div className="flex items-center space-x-6 pl-10">
             <button>
               <i className="fa-solid fa-magnifying-glass text-lg"></i>
@@ -248,7 +250,7 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* ---------- Desktop Dropdown ---------- */}
+      {/* ---------- Dropdown ---------- */}
       {hovered && dropdownContent[hovered] && isDropdownVisible && (
         <div
           className="absolute left-0 w-screen bg-[#f5f5f7] border-t border-gray-300 shadow-lg animate-fadeIn"
@@ -284,15 +286,15 @@ const Header = () => {
       {isMobileOpen && (
         <div className="md:hidden border-t border-gray-700 bg-black/95 backdrop-blur-md">
           <div className="px-4 py-4">
-            {links.map((label) => (
-              <a
+            {links.map(({ label, path }) => (
+              <Link
                 key={label}
-                href="#"
+                to={path}
                 className="block py-3 border-b border-gray-800 last:border-b-0 text-white hover:text-gray-300 transition-colors"
                 onClick={() => setIsMobileOpen(false)}
               >
                 {label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
